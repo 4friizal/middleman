@@ -14,6 +14,7 @@ export async function getServerSideProps({ req, res }) {
 			},
 		};
 	}
+
 	const requestOptions = {
 		method: "GET",
 		headers: {
@@ -21,7 +22,7 @@ export async function getServerSideProps({ req, res }) {
 		},
 	};
 	const response = await fetch(
-		`https://postme.site/orders/admins`,
+		`https://virtserver.swaggerhub.com/vaniliacahya/capstone/1.0.0/orders/admins`,
 		requestOptions
 	);
 	const data = await response.json();
@@ -59,13 +60,7 @@ function History_order({ data }) {
 							</tr>
 						</thead>
 						<tbody>
-							<tr className="bg-white text-xs md:text-lg lg:text-lg  text-black border-b-2 border-neutral-400 ">
-								{/* <td className="py-3 pl-2">1</td>
-								<td className="py-3">20/07/2022</td>
-								<td className="py-3">Beras Wangi</td>
-								<td className="py-3">Pengiriman</td>
-								<td className="py-3">Rp 299.000</td> */}
-							</tr>
+							<tr className="bg-white text-xs md:text-lg lg:text-lg  text-black border-b-2 border-neutral-400 "></tr>
 						</tbody>
 					</table>
 					{data.map((data) => (
